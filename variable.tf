@@ -1,15 +1,15 @@
-variable "instance_type" {
-  type        = string
-  default     = "t3.micro"
-  description = "Instance size"
-}
-
-variable "sg_ids" {
-  type        = list(string)
-  description = "List of security group IDs"
+variable "security_group_ids" {
+    default = ["sg-0ccba06af95f41fdb"]
 }
 
 variable "tags" {
-  type        = map(string)
-  description = "Tags to assign to the instance"
+    default = {
+        Name = "roboshop-cart"
+        Terraform = "true"
+        Environment = "dev"
+    }
+}
+
+variable "instance_type" {
+    default = "t3.small"
 }
