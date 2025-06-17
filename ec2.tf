@@ -1,3 +1,3 @@
-moduel "ec2" {
+module "ec2" {
     source = "../terraform-aws-instance"
 }
