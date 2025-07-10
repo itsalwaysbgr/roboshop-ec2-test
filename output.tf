@@ -9,3 +9,8 @@ output "private_ip" {
 output "instance_id" {
     value = module.ec2.instance_id
 }
+
+
+output "public_subnet_ids" {
+    value = aws_subnet.public[*].id
+}
